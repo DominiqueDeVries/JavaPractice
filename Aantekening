@@ -84,7 +84,59 @@ class Main {
   }
 }
 
+//-----------------------------------------------------------------------
+//Abstraction: Abstract Classes and Methods --> ook met behulp van extends.
+Hierdoor kan je bepaalde informatie verbergen en alleen essentiele informatie laten zien aan de user.
+Abstraction kan behaald worden met abstracte classes en interfaces.
 
+// abstract (non-acces modifier) valt te verdelen onder: 
+
+1. abstract class. vb: abstract class Animal{} = restricted class en kan niet gebruikt worden om objecten hiervan te maken en 
+                                                 om deze te accessen (te zien), moet deze geinherit worden van een andere class.
+                                                 
+2. abstract method. vb: public abstract void animalSound();. kan alleen gebruikt worden in een abstacte class en heeft geen body. Deze
+                                                              wordt geleverd door de subclass (geinherit van superclass).
+                                                              
+
+
+
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+An abstract class can have both abstract and regular methods:
+
+
+
+
+
+
+
+
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
 
 
 
