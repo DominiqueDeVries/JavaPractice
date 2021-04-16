@@ -97,35 +97,23 @@ Abstraction kan behaald worden met abstracte classes en interfaces.
 2. abstract method. vb: public abstract void animalSound();. kan alleen gebruikt worden in een abstacte class en heeft geen body. Deze
                                                               wordt geleverd door de subclass (geinherit van superclass).
                                                               
-
-
-
-
-Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
-An abstract class can have both abstract and regular methods:
-
-
-
-
-
-
-
-
+                                                              Een abstract class kan abstract and regular methods tegelijk hebben.
 
 // Abstract class
+
 abstract class Animal {
-  // Abstract method (does not have a body)
+                                                  // Abstract method (geen body)
   public abstract void animalSound();
-  // Regular method
+                                                   // Regular method met een body.
   public void sleep() {
     System.out.println("Zzz");
   }
 }
 
 // Subclass (inherit from Animal)
-class Pig extends Animal {
+class Pig extends Animal {                          // extends
   public void animalSound() {
-    // The body of animalSound() is provided here
+                                                    // de body van animalSound() wordt hier geleverd.
     System.out.println("The pig says: wee wee");
   }
 }
