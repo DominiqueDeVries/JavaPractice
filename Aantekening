@@ -1,50 +1,53 @@
 // Inheritence: to inherit methods/attributes from one class to another.
 // 2 categories: superclass (parent) and subclass (child).
 
-                class Vehicle {
+class Vehicle {                                 // superclass
 
-                    protected String brand = "Ford";
-                    public void honk() {
-                        System.out.println("Tuut, tuut!");
-                    }
-                }
+  protected String brand = "Ford";
+  
+  public void honk() {
+    System.out.println("Tuut, tuut!");          // via object van class Car, call je brand en honk()
+  }
+}
 
-                class Car extends Vehicle {
+class Car extends Vehicle {                     // subclass: door extends krijg je inheritance
 
-                    private String modelName = "Mustang";
-                    public static void main(String[] args) {
-                        Car myFastCar = new Car();          //object van subclass Car
+  private String modelName = "Mustang";
+  
+  public static void main(String[] args) {
+  
+    Car objectFastCar = new Car();             // object van subclass Car
 
-
-                        myFastCar.honk();
-                        System.out.println(myFastCar.brand + " " + myFastCar.modelName);
-
-                        // tuut, tuut
-                        // ford mustang
-                    }
-                }
+    myFastCar.honk();                          // Call de honk() method: tuut, tuut!
+    
+    System.out.println(objectFastCar.brand + " " + objectFastCar.modelName);        // Tuut, tuut!
+                                                                                    // Ford Mustang
+    }
+}
                 
 // Inheritance met private
 
-                class Vehicle {
+class Vehicle {
 
-                    private String brand = "Ford"; // is nu private, dus een error
-                    public void honk() {
-                        System.out.println("Tuut, tuut!");
-                    }
-                }
+  private String brand = "Ford";                // is nu private, dus een error
+  
+  public void honk() {
+     System.out.println("Tuut, tuut!");
+  }
+}
 
-                class Car extends Vehicle {
+class Car extends Vehicle {
 
-                    private String modelName = "Mustang";
-                    public static void main(String[] args) {
-                        Car myFastCar = new Car();
+   private String modelName = "Mustang";
+   
+   public static void main(String[] args) {
+   
+      Car myFastCar = new Car();
 
-
-                        myFastCar.honk();
-                        System.out.println(myFastCar.brand + " " + myFastCar.modelName);
-                    }
-                }
+      myFastCar.honk();
+          System.out.println(myFastCar.brand + " " + myFastCar.modelName);
+       }
+}
 //----------------------------------------------------------------------------------------------------------
  // Polymorpisme = vindt plaats als er meerdere classen zijn waarbij gebruikt wordt gemaakt van
  // inheritance tussen deze classen, dus vaker extends van superclass.
