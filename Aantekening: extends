@@ -110,10 +110,10 @@ abstract class Animal {
   }
 }
 
-// Subclass (inherit from Animal)
-class Pig extends Animal {                          // extends
-  public void animalSound() {
-                                                    // de body van animalSound() wordt hier geleverd.
+// Subclass (inherit van Animal)
+class Pig extends Animal {                           // extends
+  public void animalSound() {                        // abstract keyword is nu weg.
+                                                     // de body van animalSound() wordt hier geleverd.
     System.out.println("The pig says: wee wee");
   }
 }
