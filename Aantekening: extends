@@ -118,8 +118,8 @@ class Pig extends Animal {                           // extends
   }
 }
 
-class Main {
-  public static void main(String[] args) {
+class Main {                                          
+  public static void main(String[] args) {        // bij abstract main method in class Main, bij inheritance main method in subbclass clas Car
     Pig myPig = new Pig(); // Create a Pig object
     myPig.animalSound();
     myPig.sleep();
