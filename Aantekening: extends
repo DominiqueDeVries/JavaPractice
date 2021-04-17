@@ -102,9 +102,9 @@ Abstraction kan behaald worden met abstracte classes en interfaces.
 // Abstract class
 
 abstract class Animal {
-                                                  // Abstract method (geen body). Kan geen object maken van abstract class.
+                                              // Abstract method (met ; en geen body) alleen in abstract class. Kan geen object maken van abstract class.
   public abstract void animalSound();
-                                                   // Regular method met een body.
+                                                   // Regular method met een body en ;.
   public void sleep() {
     System.out.println("Zzz");
   }
