@@ -129,7 +129,7 @@ class Main {
 //---------------------------------------------------------------
 
 
-// interface vs abstraction: bij beiden geen object ervan maken.
+        // interface vs abstraction: bij beiden geen object ervan maken.
 
         //Voordelen interface: Om security te realiseren: info verstoppen en alleen het belangrijke laten zien.
         //                      En kan meerdere interface tegelijk implementeren, kan inheritance niet (1 superclass).
