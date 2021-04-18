@@ -126,7 +126,44 @@ class Main {
   }
 }
 
+//---------------------------------------------------------------
 
+
+// interface vs abstraction: bij beiden geen object ervan maken.
+
+        //Voordelen interface: Om security te realiseren: info verstoppen en alleen het belangrijke laten zien.
+        //                      En kan meerdere interface tegelijk implementeren, kan inheritance niet (1 superclass).
+
+
+        interface DogInterface {            // interface is een abstracte class, met alleen maar lege bodies.
+                                            // interface implementeerd direct alles.
+            public void animalSound();     // interface methodes, mogen geen body hebben en standaard public en abstract.
+            public void sleep();
+        }
+
+
+        class Chiha implements DogInterface {       // interface gebruikt implements ipv extends.
+
+            public void animalSound(){
+
+                System.out.println("bark");
+            }
+
+            public void sleep() {
+
+                System.out.println("Zzzs");
+            }
+        }
+
+        public class Oef{
+            public static void main(String[] args){
+
+                Chiha objChiha = new Chiha();
+
+                objChiha.animalSound();
+                objChiha.sleep();
+            }
+        }
 
 
 
