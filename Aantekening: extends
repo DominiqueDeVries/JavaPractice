@@ -138,7 +138,7 @@ class Main {
         interface DogInterface {            // interface is een abstracte class, met alleen maar lege bodies.
                                             // interface implementeerd direct alles.
             public void animalSound();     // interface methodes, mogen geen body hebben en standaard public en abstract.
-            public void sleep();
+            public void sleep();            // geen abstract woord, bij abstracte class wel.
         }
 
 
