@@ -17,7 +17,7 @@
          */
 
         enum Level {
-            LOW,
+            LOW,                // constants zijn public, static en final
             MEDIUM,
             HIGH
         }
