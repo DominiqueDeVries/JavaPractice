@@ -1,0 +1,24 @@
+/*
+Onderaan bij console vul je je pokemon1 in, pas op met enter knop, druk met de muis.
+
+ */
+
+import java.util.Scanner;           // Import scanner class (package).
+
+public class ScannerOef {
+
+    public static void main(String[] args){
+
+        Scanner oefScan = new Scanner(System.in);   // System.in = invoeren (input) bij de console hieronder (typen).
+
+        System.out.println("Please enter pokemon 1");
+
+        String pokemon1 = oefScan.nextLine();       // Wat de user invult wordt gelijk gezet aan pokemon1.
+                                                    // nextLine() leest Strings, dus de volgende regel wat er
+                                                    //  wordt getypt, staat gelijk aan pokemon1.
+
+        System.out.println("Your pokemon is: " + pokemon1);
+
+        System.out.println("Your are done.");
+    }
+}
