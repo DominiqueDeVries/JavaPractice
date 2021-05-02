@@ -1,0 +1,34 @@
+import java.time.LocalDate;
+
+public class PacDateTime {
+
+    public static void main(String[] args){
+
+        LocalDate objTime = LocalDate.now();    // maak object van LocalDate.
+                                                // gebruik .now() voor de huidige tijd.
+        System.out.println(objTime);
+    }
+}
+//------------------------------------------------------------
+
+import java.time.LocalDateTime; // Import the LocalDateTime class
+import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
+
+public class Main {
+     public static void main(String[] args) {
+
+        // maak object van LocalDateTime en gebruik now()
+        LocalDateTime myDateObj = LocalDateTime.now();   /
+        System.out.println("Before formatting: " + myDateObj);
+
+        // maak object van DateTimeFormatter en gebruik ofPattern()
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+                                                                            //kies type format tussen("..");
+                                                                        // dit kan op vers manieren (formats).
+
+        String formattedDate = myDateObj.format(myFormatObj);
+        // maak en nieuwe String variable.
+
+        System.out.println("After formatting: " + formattedDate);
+   }
+}
