@@ -1,0 +1,86 @@
+import java.util.ArrayList;
+
+public class PacDateTime {
+
+    public static void main(String[] args) {
+
+        // ArrayList to store Strings = resizable array
+        // Zijn flexibeler en minder werk. Kan makkelijk aangepast worden.
+
+        ArrayList cars = new ArrayList(); // heeft geen [x] elementen, zoals Array
+
+        cars.add("Volvo");      // [0]
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
+        //  cars.add("watermelon"); --> makkelijker toevoegen dan Array.
+
+        // cars.remove(0).  --> verwijdert Volvo.
+
+       // cars.clear();  --> verwijdert alles --> output: []
+
+        cars.set(0, "opel");    // om aan te passen, set() en index nummer, volvo naar opel.
+        cars.set(0, "volvo");
+
+        System.out.println(cars); // [Volvo, BMW, Ford, Mazda]
+
+        System.out.println(cars.size()); // 4, size() laat aantal elementen zien in Arraylist.
+
+        System.out.println(cars.get(0));  // volvo
+
+
+        // gebruik for loop om door de elementen van ArrayList te loopen m.b.v. size() om de specificeren
+        // hoe vaak de loop zou moeten runnen, dus 4x.
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println(cars.get(i)); // pas aan het eind, na println, dan  i++, dus +1
+        }
+       // output:
+        // Volvo
+        //BMW
+        //Ford
+        //Mazda
+        //Mango
+
+        /*
+        for (String i : cars) {    // dezelfde output als for loop.
+            System.out.println(i);
+        }
+         */
+
+        // Array of Strings (geen ArrayList).
+        String[] fruitArray = new String[3]; // moet uit 3 elementen bestaan.
+
+        fruitArray[0] = "Mango";                // als
+        fruitArray[1] = "Apple";
+        fruitArray[2] = "Strawberry";
+
+        // fruitArray[3] = "Strawberry"; --> veroorzaakt een error, want mag maar [3] elementen, of aanpassen naar [4].
+
+        System.out.println(fruitArray[0]);  // Mango
+
+
+        /* ArrayList van integers om cijfers op te slaan.
+
+            String is een object , geen primitieve datatype.
+            Bij primitieve datatypes zoals byte, short, int, long, float, double, boolean, char. gebruik dan de
+            wrapper class: Byte, Short, Integer (geen int), Long, Float, Double, Boolean, Character.
+         */
+
+        ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // gebruik Integer.
+        myNumbers.add(10);
+        myNumbers.add(15);
+        myNumbers.add(20);
+        myNumbers.add(25);
+        for (int i : myNumbers) {
+            System.out.println(i);
+        }
+            
+        // output:
+        // 10
+        // 15
+        // 20
+        // 25
+
+
+    }
+}
