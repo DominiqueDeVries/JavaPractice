@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;   // Collections class met sort() om op numerieke of alfabetisce volgorde te sorteren.
 
 public class PacDateTime {
 
@@ -68,19 +69,38 @@ public class PacDateTime {
 
         ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // gebruik Integer.
         myNumbers.add(10);
-        myNumbers.add(15);
+        myNumbers.add(30);
         myNumbers.add(20);
-        myNumbers.add(25);
+        myNumbers.add(9);
+
+        Collections.sort(myNumbers);    // Collections class met sort() om op numerieke of alfabetisce volgorde te sorteren.
+                                        // Importeer de Collections class.
         for (int i : myNumbers) {
             System.out.println(i);
         }
-            
+
         // output:
+        // 9
         // 10
-        // 15
         // 20
-        // 25
+        // 30
 
+      /*
+        cars.add("Volvo");
+        cars.add("BMW");
+        cars.add("Ford");
+        cars.add("Mazda");
 
+        Collections.sort(cars);     //print uit op alfabetische volgorde
+
+        for (String i : cars) {
+            System.out.println(i);
+        }
+            output:
+            BMW
+            Ford
+            Mazda
+            Volvo
+        */
     }
 }
