@@ -1,12 +1,16 @@
-import java.util.ArrayList;
-import java.util.Collections;   // Collections class met sort() om op numerieke of alfabetisce volgorde te sorteren.
+import java.util.ArrayList;       //ArrayList class met add() om elementen toe te voegen.
+import java.util.Collections;     //Collections class met sort() om op numerieke of alfabetisce volgorde te sorteren.
 
-public class PacDateTime {
+public class Main {
 
     public static void main(String[] args) {
 
-        // ArrayList to store Strings = resizable array
-        // Zijn flexibeler en minder werk. Kan makkelijk aangepast worden.
+        /*
+        ArrayList to store Strings = resizable array
+        Zijn flexibeler en minder werk. Kan makkelijk aangepast worden.
+        java.util (package) bevat classen  die je kunt gebruiken/importeren zoals ArrayList en Collections.
+        Collections class bevat weer bijv de sort(.)
+        */
 
         ArrayList cars = new ArrayList(); // heeft geen [x] elementen, zoals Array
 
@@ -23,17 +27,20 @@ public class PacDateTime {
         cars.set(0, "opel");    // om aan te passen, set() en index nummer, volvo naar opel.
         cars.set(0, "volvo");
 
+        System.out.println(cars.set(0, "aap"));
+
         System.out.println(cars); // [Volvo, BMW, Ford, Mazda]
 
-        System.out.println(cars.size()); // 4, size() laat aantal elementen zien in Arraylist.
+        System.out.println(cars.size()); // 4, size() laat aantal elementen zien in Arraylist, begint niet met [0].
 
         System.out.println(cars.get(0));  // volvo
 
 
         // gebruik for loop om door de elementen van ArrayList te loopen m.b.v. size() om de specificeren
-        // hoe vaak de loop zou moeten runnen, dus 4x.
+        // hoe vaak de loop zou moeten runnen, dus 4x. Begint bij 1, niet bij [0].
+
         for (int i = 0; i < cars.size(); i++) {
-            System.out.println(cars.get(i)); // pas aan het eind, na println, dan  i++, dus +1
+            System.out.println(cars.get(i));        // pas aan het eind, na println, dan  i++, dus +1
         }
        // output:
         // Volvo
