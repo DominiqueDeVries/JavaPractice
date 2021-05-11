@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class OefList {
+
+    public static void main(String[] args){
+
+        // Deze willen we in een ArrayList.
+        String sentence = "Flapjack are awesome!";
+
+        // Gebruik Scanner om door de woorden te gaan van sentence en de woorden
+        // op te slaan in scanObj.
+        Scanner scanObj = new Scanner (sentence);
+
+        ArrayList<String> words = new ArrayList<String>();
+
+        // while scanObj has a next word, ja dat klopt (true), dat is Flapjack.
+        // Daarna opslaan (add) in ArrayList words. Vervolgens is next word, are, als laatst
+        // awesome, dan stopt while loop. Als laatst prinln die de lijst van woorden.
+        while (scanObj.hasNext()){
+            words.add(scanObj.next())
+        }
+
+        System.out.println(words); // [Flapjack, are, awesome!] met komma's.
+    }
+}
