@@ -18,7 +18,7 @@ public class OefList {
         // Daarna opslaan (add) in ArrayList words. Vervolgens is next word, are, als laatst
         // awesome, dan stopt while loop. Als laatst prinln die de lijst van woorden.
         while (scanObj.hasNext()){
-            words.add(scanObj.next())
+            words.add(scanObj.next());
         }
 
         System.out.println(words); // [Flapjack, are, awesome!] met komma's.
