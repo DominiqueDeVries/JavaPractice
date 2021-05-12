@@ -1,0 +1,77 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+/*
+LinkedList en ArrayList:
+Overeenkomsten:
+- allebei kunnen ze dezelfde objecten hebben van dezelfde types,
+- allebei kunnen ze dezelfde methods() gebruiken, omdat ze de List interface implementeren,
+- allebei kunnen ze elementen toevoegen, verwijderen of veranderen uit de list.
+
+Verschillen:
+LinkedList:
+ - Gebruik de LinkedList om te loopen, niet voor accessen random.
+ - Gebruik de LinkedList als er sprake is van vaak toevoegen/verwijderen van elementen van begin, midden of einde
+   van de list.
+-  LinkedList slaat meer memory op, omdat de elementen gelinked zijn met elkaar. Een element slaat de node gelijk
+   daarvoor en daarachter opslaat in zijn geheugen.
+- Het toevoegen van elementen gaat bij LinkedList sneller, omdat het geen effect heeft op de andere elementen
+  (index blijft precies hetzelfde).
+- Bij LinkedList is puur zoeken naar waardes langzamer (fetchen), doordat de gelinkte nodes.
+- LinkedList slaat elementen op in containers: head-node-node-tail.
+
+ArrayList:
+- Is langzamer bij aanpassen of veranderen van de elementen. De index verspringt van de elementen. De index moet telkens
+  aanpast worden
+- Minder memory omdat die niks opslaat dan alleen de data en index, dus geen nodes.
+- Gebruik de ArrayList alleen als je het einde van de list wilt aanpassen.
+- Geberuik de ArrayList bij het vaak random accessen van elementen.
+*/
+
+public class OefLink {
+
+    public static void main(String[] args){
+
+        LinkedList<String> linky = new LinkedList<String>();
+
+        linky.add("Rob");       // door punt. komen beschikbare methods() naar voren.
+        linky.add("Alex");
+        linky.add("Jose");
+
+        System.out.println(linky);  // [Rob, Alex, Jose]
+
+        linky.remove();     // verwijdert het eerste woord.
+
+        System.out.println(linky);      // [Alex, Jose]
+
+       // linky.clear();       //  verwijdert alles.
+
+        // System.out.println(linky);  // []
+
+        System.out.println(linky.getFirst());  // Alex, laat alleen zien.
+
+        // System.out.println(linky.addFirst("aap")); -->  Geeft een error.
+
+        linky.addFirst("Aap");          // Voegt aap toe aan de LinkedList.
+
+        System.out.println(linky);          // [Aap, Alex, Jose].
+
+        LinkedList<Integer>linky2 = new LinkedList<Integer>();  // Geen <int>, maar hoofdletter.
+
+        linky2.add(6);
+        linky2.add(78);
+        linky2.add(1);
+
+        System.out.println(linky2.get(1));  // Pakt 78, geen 6. 6 begint bij index 0.
+
+        Iterator it = linky2.iterator();    // gebruik de iterator als je veel elementen (bijv 100) hebt en geen zorgen
+                                            // wilt maken over de exacte index.
+
+        while(it.hasNext()) {               // while de iterator has something next, dan doet die iets.
+
+            if ((int) it.next() == 78) {    // Als element in LinkedList gelijk is aan 78, doe dan println.
+                                            // Als er geen 78 in de linky2 staat, dan doet die niks.
+                System.out.println("We found 78.");  // We found 78.
+            }
+        }
+    }
+}
