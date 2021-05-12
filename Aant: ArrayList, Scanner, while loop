@@ -14,9 +14,10 @@ public class OefList {
 
         ArrayList<String> words = new ArrayList<String>();
 
-        // while scanObj has a next word, ja dat klopt (true), dat is Flapjack.
-        // Daarna opslaan (add) in ArrayList words. Vervolgens is next word, are, als laatst
-        // awesome, dan stopt while loop. Als laatst prinln die de lijst van woorden.
+    /* while scanObj has a next word, dat is true, namelijk Flapjack.
+    Daarna opslaan (add) in ArrayList words. Vervolgens is next word,    are, als laatst, awesome, dan 
+    stopt de while loop. Als laatst println die de lijst van woorden.
+    */
         while (scanObj.hasNext()){
             words.add(scanObj.next());      // scanObj.next = een woord.
         }
