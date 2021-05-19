@@ -38,8 +38,14 @@ public class Main {
     for (int var2 : people.values()) { 		// No String, but int
   		System.out.println(var2);
 		}
-    // 33
+    	// 33
   	// 30
-	  // 32
+	 // 32
+	  
+    for (String var3 : people.keySet()) {
+      System.out.println("Name: " + var3 + " Age: " + people.get(var3));  
+    } 
+	  // laat de linkerkant (keys) zien van people en bij .get(var3), laat die de waardes zien van keys, dus links (values).
+	  
   }
 }
