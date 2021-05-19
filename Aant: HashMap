@@ -1,0 +1,45 @@
+import java.util.HashMap;
+
+public class Main {
+  public static void main(String[] args) {
+    HashMap<String, String> capitalCities = new HashMap<String, String>();
+    capitalCities.put("England", "London");
+    capitalCities.put("Germany", "Berlin");
+    capitalCities.put("Norway", "Oslo");
+    capitalCities.put("USA", "Washington DC");
+    System.out.println(capitalCities); 
+    // {USA=Washington DC, Norway=Oslo, England=London, Germany=Berlin}
+    
+    System.out.println(capitalCities.containsValue("England")); // False
+	
+        		
+    HashMap<String, Integer> people = new HashMap<String, Integer>();
+
+	  // int john = 32;
+    // int steve = 30;
+    // int angie = 33;
+    
+    // Add keys and values (Name, Age)
+    people.put("John", 32);
+    people.put("Steve", 30);
+    people.put("Angie", 33);
+    
+    System.out.println(people.containsValue(32)); // True
+    
+    System.out.println(people.get("John"));  // 32
+    
+    for (String var : people.keySet()) {
+      System.out.println(var);
+    } 	
+    // Angie
+	  // Steve
+	  // John
+    
+    for (int var2 : people.values()) { 		// No String, but int
+  		System.out.println(var2);
+		}
+    // 33
+  	// 30
+	  // 32
+  }
+}
