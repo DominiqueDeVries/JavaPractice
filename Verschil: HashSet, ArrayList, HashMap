@@ -1,0 +1,46 @@
+/* Import HashSet en Iterator class
+
+	HashSet = elk element moet uniek zijn, 
+    		  bij dubbele elementen wordt er 1 verwijderd,
+          println niet in specifieke volgorde,
+          voegt toe met add()-->[Volvo, Mazda, Ford, BMW].
+              
+   ArrayList =  is wel index gebaseerd, en mag dubbele elementen bevatten,
+   				      bij println wel een specifieke volgorde  --> [Volvo, BMW, Ford, BMW, Mazda].
+                voegt toe met add().
+                
+   HashMap  = 	Gebruikt put() om elementen toe te voegen,
+   				      println zonder specifieke volgorde --> {USA=Washington DC, Norway=Oslo, England=London, Germany=Berlin},
+                bestaat uit keys/values.
+*/
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+    HashSet<String> cars = new HashSet<String>();
+    cars.add("Volvo");
+    cars.add("BMW");		// laat BMW maar 1x zien.
+    cars.add("Ford");
+    cars.add("BMW");
+    cars.add("Mazda");
+    
+    System.out.println(cars);  // [Volvo, Mazda, Ford, BMW]
+    
+    
+    Iterator<String> it = cars.iterator();
+    
+    while(it.hasNext()) {
+    
+    	System.out.println(it.next());
+    }									// Volvo
+										// Mazda
+										// Ford
+										// BMW
+    
+    Object [] h = cars.toArray();
+    
+    System.out.println(h[1]);   // Mazda, geen BMW.
+    
+  }
+}
