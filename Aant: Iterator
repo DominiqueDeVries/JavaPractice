@@ -1,0 +1,72 @@
+import java.util.ArrayList;
+import java.util.Iterator;   // Import Iterator class from java.util package.
+
+/*
+Iterator = A object to loop through collections, like ArrayList, HashSet, etc..
+			Use the iterator() to get an Iterator.
+*/
+
+public class Main {
+  public static void main(String[] args) {
+  
+    ArrayList<Integer> cars = new ArrayList<Integer>();    // ArrayList = container.
+    cars.add(13);
+    cars.add(24);
+    cars.add(5);
+    
+  
+    // Import the iterator
+    Iterator<Integer> it = cars.iterator();  // Now use iterator() to loop through cars.
+  											 // it (iterator) has all elements form cars.
+  
+    System.out.println(it.next());			// Print the first item = 13
+    
+    it.next();								// Go to next word. Don't do anything.
+    
+    System.out.println(it.next()); 			// 5
+    
+    //---------------------------------
+    
+    Iterator<Integer> itVar = cars.iterator();  // iterator knows that everything will be Integer,
+    											// because of <Integer>.
+    
+    while(itVar.hasNext()){			// if itVar has a word, true?, println that word.
+    
+    	System.out.println(itVar.next());   // 13
+  											// 24
+    }										// 5
+    
+    //--------------------------------
+    
+    // Does the same as itVar and while loop.
+    for(int varLoop : cars) {
+    
+    	System.out.println(varLoop); 		// 13
+  											// 24
+    }										// 5
+   
+    //----------------------------------------
+    
+    Iterator<Integer> it2 = cars.iterator();
+    
+    int str = it2.next();
+    
+    System.out.println(str);   // 13
+    
+    //--------------------------------------
+    
+    // Gives an error:
+  
+   // Iterator it3 = cars.iterator();
+    
+   // int str = it3.next();
+   
+   // No Error:
+   Iterator it3 = cars.iterator();
+    
+   int str2 = (int)it3.next();		// casting
+   
+   System.out.println(str2);   // 13
+     
+  }
+}
