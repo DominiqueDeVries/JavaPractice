@@ -4,6 +4,10 @@ import java.util.Iterator;   // Import Iterator class from java.util package.
 /*
 Iterator = A object to loop through collections, like ArrayList, HashSet, etc..
 			Use the iterator() to get an Iterator.
+            Iterator interface contains three ():
+            1. hasNext() --> boolean,
+            2. next() --> go to next word,
+            3. remove() --> removes the current element.
 */
 
 public class Main {
@@ -21,20 +25,24 @@ public class Main {
   
     System.out.println(it.next());			// Print the first item = 13
     
-    it.next();								// Go to next word. Don't do anything.
+    it.next();								// Go to next 24. Don't do anything.
+    
+    it.remove();							// Removes 24
     
     System.out.println(it.next()); 			// 5
     
-    //---------------------------------
+     System.out.println(cars);				// [13, 5]
     
+    //---------------------------------
+
     Iterator<Integer> itVar = cars.iterator();  // iterator knows that everything will be Integer,
     											// because of <Integer>.
     
     while(itVar.hasNext()){			// if itVar has a word, true?, println that word.
     
     	System.out.println(itVar.next());   // 13
-  											// 24
-    }										// 5
+  											// 5
+    }										
     
     //--------------------------------
     
@@ -42,7 +50,7 @@ public class Main {
     for(int varLoop : cars) {
     
     	System.out.println(varLoop); 		// 13
-  											// 24
+  										
     }										// 5
    
     //----------------------------------------
@@ -67,6 +75,6 @@ public class Main {
    int str2 = (int)it3.next();		// casting
    
    System.out.println(str2);   // 13
-     
+
   }
 }
