@@ -1,0 +1,173 @@
+Main.java
+
+public class Main {
+  public static void main(String[] args) {
+   
+   /*
+   try/catch statements handles Exceptions (errors). --> always together.
+   
+   try-statement = you can test a block of code for errors,while it's being executed.
+   
+   catch-statement = executes a block of code if an error occurs in try block.
+   
+   finally = executes a block of code after try/catch code blocks, regardless of the result.
+   
+   trow-statement = allows you to create a custom error.Use it whit a Exception type. Different Exceptions      types: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc.
+   
+   After a Exception the code wil stop and you will see a message like:
+   Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 1
+        at Main.main(Main.java:4)
+    
+  Name Exception = java.lang.ArrayIndexOutOfBoundsException,
+  "main"= Exception in main method,
+  1 = Array index[1],
+  Main.java = name of the file (folder).
+  4 = line 4.
+  
+   */
+   
+   try {
+      int[] a = {4};
+      System.out.println(a[1]);						// Try block gives an error.
+   } 
+   catch (NullPointerException b) {
+      System.out.println("Array is null");
+   } 
+   catch (ArrayIndexOutOfBoundsException c) {        // Because Array is out of bounds he will throw an  														 //  Exception (error) -->ArrayIndexOutOfBoundsException 
+      System.out.println("Index out of bounds");	
+   } 
+   catch (Exception d) {
+      System.out.println("Something generic went wrong");  // Will use this one with no spicific Exeptions.
+   } 
+   finally {
+      System.out.println("The 'try catch' is finished.");  // finally,  regardless of the result executes 															   // println.
+   }
+    
+   try {
+    int [] e = null;           // This an Array and has null value at the same thime.
+    System.out.println(e[1]);  // Gives java.lang.NullPointerException
+    }
+    
+    catch (NullPointerException f) {
+    System.out.println("Array is null");  // Array is null
+    }
+    
+    
+  //-----------------------------------------------
+  
+  /* Practise Exceptions
+  
+ 
+  // Becaus of the Exception message you will not see "Something went wrong" and you don't know what is 	  	 happened. You can use try/catch statements instead.
+  
+  
+    int[] nums = new int[5];
+    nums[10] = 25;
+    System.out.println("Something went wrong");
+    
+    
+    public static void errorMethod(int[] numms){
+ 	 nums[10]  = 25;
+    }
+  
+  
+  //--------------------------------------------
+  
+  public class Main {
+  
+  static void checkAge(int age) { 
+    if (age < 18) {
+      throw new ArithmeticException("Access denied - You must be at least 18 years old."); 
+    } else {
+      System.out.println("Access granted - You are old enough!"); 
+    }
+ } 
+ 
+ public static void main(String[] args) { 
+   checkAge(15); 
+ } 
+}
+
+ //--------------------------------------
+    
+public class Oef {
+  
+  	public static void main(String[] args) {
+    
+    	int[] nums = new int[5];
+        
+        try {
+        	Sytem.out.println("In try 1");
+            
+            errorMethod(nums);					// error occurs here, not in errorMethod.
+            Sytem.out.println("In try 2");
+           }
+          
+       catch(Exception ex){
+          	Sytem.out.println("In try 2");	
+          }  
+    }
+  
+    public static void errorMethod(int[] numms){
+ 	 nums[10]  = 25;
+     }
+} 
+    
+ Output: In try 1
+ 		 In catch
+         Rest of program
+ //------------------------------------------------
+ 
+ public class Oef {
+  
+  	public static void main(String[] args) {
+    
+    	int[] nums = new int[5];
+        
+        try {
+        	Sytem.out.println("In try 1");
+            
+        	nums[10] = 25;		
+            Sytem.out.println("In try 2");
+           }
+          
+       catch (Exception ex) {
+          	Sytem.out.println("In try 2");	
+          } 
+    }
+} 
+    
+ Output: In try 1
+ 		 In catch
+         Rest of program
+ 
+ //----------------------------------------------
+ 
+ 
+ public class Oef {
+  
+  	public static void main(String[] args) {
+    
+    	int[] nums = new int[5];
+        
+        try {
+        	Sytem.out.println("In try 1");
+            
+        	nums[3] = 25;					// change [10] to [3], no Exception occurs
+            Sytem.out.println("In try 2");
+           }
+          
+       catch (Exception ex) {
+          	Sytem.out.println("In try 2");	// no catch-block
+          }  
+    }
+} 
+    
+ Output: In try 1
+ 		 In try 2
+         Rest of program
+  
+  */
+    
+  }
+}
