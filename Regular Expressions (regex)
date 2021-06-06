@@ -1,0 +1,46 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+  public static void main(String[] args) {
+    Pattern pattern = Pattern.compile(".xx.");
+    Matcher matcher = pattern.matcher("AxxB");
+    
+    System.out.println(matcher.matches());	// True, there is a match -> matches()
+    
+  }
+}
+
+/*
+ Pattern pattern = Pattern.compile("homewOrk");
+    Matcher matcher = pattern.matcher("homework"); 
+    boolean matchFound = matcher.find();
+    if(matchFound) {
+      System.out.println("Match found");
+    } else {
+      System.out.println("Match not found");    // Match not found. 
+    }
+  
+  //---------------------------------------------------
+  
+   Pattern pattern = Pattern.compile("homework");
+    Matcher matcher = pattern.matcher("homework"); 
+    boolean matchFound = matcher.find();
+    if(matchFound) {
+      System.out.println("Match found");		// Match found
+    } else {
+      System.out.println("Match not found");    
+    }
+  
+  //--------------------------------------------------
+  
+ Pattern pattern = Pattern.compile("hOmewOrk", Pattern.CASE_INSENSITIVE);
+    Matcher matcher = pattern.matcher("Do your hoMeworK");
+    boolean matchFound = matcher.find();
+    if(matchFound) {
+      System.out.println("Match found");  // Match found, because of CASE_INSENSITIVE
+    } else {
+      System.out.println("Match not found");
+    }
+  
+*/
