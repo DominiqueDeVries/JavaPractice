@@ -12,6 +12,19 @@ public class Main {
 }
 
 /*
+
+Pattern pattern = Pattern.compile(".x.");
+    Matcher matcher = pattern.matcher("AxxB");
+    
+    System.out.println(matcher.matches());	// false
+
+//-------------------------------------------------
+Pattern pattern = Pattern.compile(".xx.");
+    Matcher matcher = pattern.matcher("AxB");
+    
+    System.out.println(matcher.matches());	// false
+
+//----------------------------------------------------
  Pattern pattern = Pattern.compile("homewOrk");
     Matcher matcher = pattern.matcher("homework"); 
     boolean matchFound = matcher.find();
