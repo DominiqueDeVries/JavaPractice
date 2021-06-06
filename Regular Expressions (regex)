@@ -3,10 +3,10 @@ import java.util.regex.Pattern;
 
 public class Main {
   public static void main(String[] args) {
-    Pattern pattern = Pattern.compile(".xx.");
+    Pattern pattern = Pattern.compile(".xx.");    // left and right of dot . does not matter. Within .  . must be the same.
     Matcher matcher = pattern.matcher("AxxB");
     
-    System.out.println(matcher.matches());	// True, there is a match -> matches()
+    System.out.println(matcher.matches());	    // True, there is a match -> matches()
     
   }
 }
