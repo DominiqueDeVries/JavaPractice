@@ -1,3 +1,12 @@
+
+/* 
+n? = 1 of niet.
+n* = 0 of meer.
+n+ =  1 of meer.
+{x} = precies x keer.
+{x,} = tenminste x keer.
+{x,y}  = tenminste x, niet meer dan y.
+*/
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
