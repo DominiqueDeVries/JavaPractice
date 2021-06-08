@@ -6,26 +6,23 @@ public class Main {
     Pattern pattern = Pattern.compile(".xx.");    // left and right of dot . does not matter. Within .  . must be the same.
     Matcher matcher = pattern.matcher("AxxB");
     
-    System.out.println(matcher.matches());	    // True, there is a match -> matches()
-    
+    System.out.println(matcher.matches());	 // True, there is a match -> matches()
   }
 }
 
 /*
-
 Pattern pattern = Pattern.compile(".m"); 	// This pattern (patroon) will search in string.
     Matcher matcher = pattern.matcher(".am");	// String.
     boolean matchFound = matcher.find();
     
-    System.out.println(matchFound);     // True,  .m = find just one instance of any character.
-    									// Wat voor de . staat maakt niet uit. Als maar aan het eind staat.
-                                        
-                                        
-	boolean c = Pattern.matches(".m", "am");
-   	System.out.println(c);			  // True.
+    System.out.println(matchFound);     	// True,  .m = find just one instance of any character.
+    						// Wat voor de . staat maakt niet uit. Als maar aan het eind staat.
+                                                                  
+    boolean c = Pattern.matches(".m", "am");
+    System.out.println(c);			// True.
    
        
-   	boolean d = Pattern.matches(".m", "maa");  // False, m nniet aan het eind.
+    boolean d = Pattern.matches(".m", "maa");  	// False, m nniet aan het eind.
     System.out.println(d);
     
     boolean e = Pattern.matches(".m", "am am");  // False, 2x m mag niet.
