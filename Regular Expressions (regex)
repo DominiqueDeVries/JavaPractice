@@ -13,6 +13,69 @@ public class Main {
 
 /*
 
+Pattern pattern = Pattern.compile(".m"); 	// This pattern (patroon) will search in string.
+    Matcher matcher = pattern.matcher(".am");	// String.
+    boolean matchFound = matcher.find();
+    
+    System.out.println(matchFound);     // True,  .m = find just one instance of any character.
+    									// Wat voor de . staat maakt niet uit. Als maar aan het eind staat.
+                                        
+                                        
+	boolean c = Pattern.matches(".m", "am");
+   	System.out.println(c);			  // True.
+   
+       
+   	boolean d = Pattern.matches(".m", "maa");  // False, m nniet aan het eind.
+    System.out.println(d);
+    
+    boolean e = Pattern.matches(".m", "am am");  // False, 2x m mag niet.
+    System.out.println(e);
+    
+   
+    System.out.println(Pattern.matches("[amn]", "acd"));  // False, [amn] = vind 1 character tussen "acd".
+   
+    System.out.println(Pattern.matches("[acd]", "a"));	// True, [acd] = vind 1 character a tussen "acd".
+   
+    System.out.println(Pattern.matches("[xyz]", "wbcd")); // False, geen 1 match.
+    
+    System.out.println(Pattern.matches("[xyz]", "xxyyyz"));   // False x en y zijn meer dan 1.
+    
+    System.out.println(Pattern.matches("[^amn]", "c"));   // True, c staat er niet bij. [^amn] = Find one character NOT between the brackets
+    
+    System.out.println(Pattern.matches("[^amn]", "cn")); // False, er is wel eem match met 2x n.
+    
+     
+    System.out.println(Pattern.matches("[a-zA-S]", "T"));   // Match met alles tusses a-z en A-S.
+   															// False, T is geen kleine letter.
+    
+    System.out.println(Pattern.matches("[a-zA-S]", "t")); 	// True, moet beginnen met een kleine letter.
+    
+    System.out.println(Pattern.matches("[a-zA-S]", "S"));   // True, S valt binnen A-S. 
+    
+   
+    System.out.println(Pattern.matches("[MS][a-z]{5}", "Monica")); // True.
+ 																                                   // Eerste woord moet beginnen hoofdletter M of S, daarna a-z, en na MS komt langte 5.
+                                                                
+    System.out.println(Pattern.matches("[xyz]?", "x"));  // True, x moet 0 of 1x voorkomen in xyz -->[xyz]?
+     
+    System.out.println(Pattern.matches("[xyz]?", "xxz"));  // False, xx moet 0 of 1x voorkomen in xyz -->[xyz]
+    
+    System.out.println(Pattern.matches("[xyz]+", "xx"));  // True x moet 1 of meer zijn --> []+
+    
+    System.out.println(Pattern.matches("[xyz]*", ""));  /// True, [xyz]*--> 0 of meer van x y of z
+    
+    System.out.println(Pattern.matches("[xyz]*", "a"));  /// False, [xyz]*--> 0 of meer van x y of z.
+    
+    System.out.println(Pattern.matches("[xyz]*", "xxyza")); // False, mag geen a.
+    
+    System.out.println(Pattern.matches("\\d", "1"));    	// True, vind een digit (cijfer).
+  
+   	System.out.println(Pattern.matches("\\d", "11"));  		// False
+   
+   	System.out.println(Pattern.matches("\\D", "1"));  		// False
+  
+//--------------------------------------------------------------------
+
 Pattern pattern = Pattern.compile(".x.");
     Matcher matcher = pattern.matcher("AxxB");
     
