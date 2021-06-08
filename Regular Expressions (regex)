@@ -73,6 +73,14 @@ Pattern pattern = Pattern.compile(".m"); 	// This pattern (patroon) will search 
   
 //--------------------------------------------------------------------
 
+ Pattern pattern = Pattern.compile("\\s");  //   \\s --> is er een whitesprace in de string?
+	Matcher matcher = pattern.matcher("jhd ihd");
+	boolean found = matcher.find();
+    
+    System.out.println(found); //true er is een whitespace
+
+//------------------------------------------------------------------
+
 Pattern pattern = Pattern.compile(".x.");
     Matcher matcher = pattern.matcher("AxxB");
     
