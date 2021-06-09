@@ -112,21 +112,10 @@ Assignments:
 
 [a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{23}
  
- // Door _(underscore) laat je dit toe.
- // Door \. laat je dit toe.
- // com kan ook bijv nl zijn dus daarom {23}
+// Door _(underscore) laat je dit toe.
+// Door \. laat je dit toe.
+// com kan ook bijv nl zijn dus daarom {23}
  
-
-
-
-
-
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------
 
