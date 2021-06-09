@@ -1,5 +1,18 @@
-
 /* 
+Regular Expressions(regex):
+
+[abc]  = alleen a, b of c.
+[^abc]  = elke char behalve a, b, of c. Bij (patroon) "[^abc]" zoeken in string  "h" // output = true.
+					"[^abc]" --> "aa" // output = false, mag maar 1 keer voorkomen.				
+					"[^abc]" zoeken in string  "ac" // output = false, mag maar 1 keer voorkomen.
+[a-z] = a tot z
+[A-Z] = A tot Z
+[a-zA-Z] = a tot z en A tot Z
+[0-9] = 0 tot 9
+[a-zA-Z0-9] = a tot z, A tot Z en 0 tot 9.
+
+Quantifiers:
+
 n? = 1 of niet.
 n* = 0 of meer.
 n+ =  1 of meer.
@@ -7,6 +20,7 @@ n+ =  1 of meer.
 {x,} = tenminste x keer.
 {x,y}  = tenminste x, niet meer dan y.
 */
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -82,7 +96,41 @@ Pattern pattern = Pattern.compile(".m"); 	// This pattern (patroon) will search 
   
 //--------------------------------------------------------------------
 
- Pattern pattern = Pattern.compile("\\s");  //   \\s --> is er een whitesprace in de string?
+Assignments:	
+1. Mobile number, starts with 8 or 9 and total digits = 10.
+
+1- [89][0-9]{9}    // blijven 9 cijfers over na 89.
+
+2. Fist char uppercase, contains lower case alpabet, only one digit allowed in between.
+
+2- [A-Z][a-z]*[0-9][]a-z]*   // tussen  de  [a-z] [a-z] is 1 digi toegestaan
+			     // []* betekent 1 of meer
+
+3. Email ID: Sadia123@gmail.com
+
+3- Email consists of 3 parts: Sadia123, gmail and com
+
+[a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{23}
+ 
+ // Door _(underscore) laat je dit toe.
+ // Door \. laat je dit toe.
+ // com kan ook bijv nl zijn dus daarom {23}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------
+
+Pattern pattern = Pattern.compile("\\s");  //   \\s --> is er een whitesprace in de string?
 	Matcher matcher = pattern.matcher("jhd ihd");
 	boolean found = matcher.find();
     
