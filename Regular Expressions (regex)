@@ -11,6 +11,17 @@ Regular Expressions(regex):
 [0-9] = 0 tot 9
 [a-zA-Z0-9] = a tot z, A tot Z en 0 tot 9.
 
+Metacharacters:
+
+\ =threat the following chararcter as search character for + en . . + and . have a different meaning in code like n+.
+If your expressions needs to search for a special char you can use a \ (backslash) to escape them. 
+\\ is used in strings to escape special char, like "\\?"  = search for one or more ?
+
+\d is een kortere beschrijving van [0-9]
+\D is een kortere beschrijving van [^0-9]
+\w is een kortere beschrijving van [a-zA-Z_0-9]
+\W is een kortere beschrijving van [^\w], Is de kleine w.
+
 Quantifiers:
 
 n? = 1 of niet.
