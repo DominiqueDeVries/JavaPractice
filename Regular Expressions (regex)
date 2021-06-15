@@ -144,7 +144,7 @@ public class Main {
    while(m.find()) {	// If match (m) is true, do the following:
    
     count++;
-    System.out.println(m.start());   // Give starting index of position in string (0,2 and 5).
+    System.out.println(m.start());   // Give starting index of of the match (m) in string (0,2 and 5).
    }
    
    System.out.println("Total number of occurrences: " + count);  // 3
