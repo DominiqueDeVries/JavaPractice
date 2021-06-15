@@ -151,6 +151,61 @@ public class Main {
    
   }
 }
+//-------------------------------------------------------
+
+String input = "This is the first line\n"
+         + "This is the second line\n"
+         + "^This is the third line";
+         
+      //Regular expression to accept date in MM-DD-YYY format
+      String regex = "This";
+      
+      //Pattern.LITERAL = Special characters in the pattern will not have any special meaning and will be treated as ordinary characters when performing a search
+      
+      Pattern pattern = Pattern.compile(regex,Pattern.LITERAL);
+      
+      System.out.println("Usually it is printed as:\n" + input);
+     													 
+      Matcher matcher = pattern.matcher(input);
+      int count = 0;
+      
+      while(matcher.find()) {
+         count++;
+         System.out.println(matcher.group());    // Door group() :      This
+         					//			This
+      }						//		        This
+      
+      System.out.println("Number of matches: " + count);
+   
+        /*
+        Usually it is printed as:
+        This is the first line
+        This is the second line
+        ^This is the third line
+        This
+        This
+        This
+        Number of matches: 3
+
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //---------------------------------------------------------------
 
