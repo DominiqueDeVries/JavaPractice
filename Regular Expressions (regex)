@@ -189,24 +189,6 @@ String input = "This is the first line\n"
 
         */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //---------------------------------------------------------------
 
 Pattern pattern = Pattern.compile("\\s");  //   \\s --> is er een whitesprace in de string?
