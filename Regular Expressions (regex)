@@ -130,6 +130,30 @@ Assignments:
 
 //----------------------------------------------------------------------------------------
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+  public static void main(String[] args) {
+   
+   int count = 0;
+   
+   Pattern p = Pattern.compile("ab");   	// ab = pattern. Must match exactly ab. 
+   Matcher m = p.matcher("ababbaba");		// ababbaba = string.
+   
+   while(m.find()) {	// If match (m) is true, do the following:
+   
+    count++;
+    System.out.println(m.start());   // Give starting index of position in string (0,2 and 5).
+   }
+   
+   System.out.println("Total number of occurrences: " + count);  // 3
+   
+  }
+}
+
+//---------------------------------------------------------------
+
 Pattern pattern = Pattern.compile("\\s");  //   \\s --> is er een whitesprace in de string?
 	Matcher matcher = pattern.matcher("jhd ihd");
 	boolean found = matcher.find();
