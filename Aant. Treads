@@ -1,0 +1,66 @@
+package com.company;
+/*
+Threads maken op 2 manieren:
+1. public class Main extends Thread + run(). In run() wordt thread gerund.
+   Bij extends moet je eerst een instance maken (object) van de class (bijv Main) en dan
+    start() aanroepen. De code in start() is buiten de thread.
+
+2. public class Main implements Runnable + run().
+   Bij implementeren van het Runnable interface moet je eerst een instance maken van
+   de class (bjv Main), vervolgens doorgeven aan de Thread's object constructor en
+   dan de start() callen.
+
+- Threads runnen gebeurt door start() aan te roepen (te callen).
+ */
+
+public class Main extends Thread {
+
+    public static void main(String[] args) {
+
+        Main objTread = new Main();     // instance maken van Main.
+        objTread.start();               // start() aanroepen.
+
+        System.out.println("Code buiten thread");
+    }
+
+    public void run(); {
+        System.out.println("Running in de thread");
+    }
+}
+//-----------------------------------------
+/*
+public class Main extends Thread {
+
+    public static void main(String[] args) {
+        
+        Main objTread = new Main();     // Instance maken van Main.
+        // objTread.start();               // Nu wordt run() niet gecalled.
+
+        System.out.println("Code buiten thread"); // dese sie je wel.
+    }
+
+            public void run(); {
+                System.out.println("Running in de thread");
+            }
+}
+
+//----------------------------------------------
+
+public class Main implements Runnable {
+    
+    public static void main(String[] args) {
+        
+        Main objRun = new Main();             // eerst object maken van Main.
+        
+        Thread thread = new Thread(objRun);   // contructor maken en object doorgeven.
+        
+        thread.start();     // Via Treads object constructor de start() callen.
+
+        System.out.println("Running buiten de thread");  // Eerst println dese
+    }
+
+    public void run(); {
+        System.out.println("Running in de thread");  // Daarna println dese.
+    }    
+}
+ */
