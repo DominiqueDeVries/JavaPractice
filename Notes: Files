@@ -3,6 +3,10 @@
 Hoe file lezen:
 1. open file,
 2. daarna lezen van file, regel voor regel. 
+
+Om een file te maken en op te slaan om een computer (pad):
+Windows = "C:\\Users\\MyName\\filename.txt"
+Mac and Linux = "/Users/name/filename.txt"
 */
 
 import java.io.File;         // import file opener.
@@ -35,6 +39,12 @@ public class Main {
 }
 /*
 // Oef.
+
+/*
+
+
+*/
+
 
 import java.io.File;      
 import java.io.FileNotFoundException;
