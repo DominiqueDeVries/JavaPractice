@@ -1,0 +1,35 @@
+/*Export a old file to a new file.
+
+Hoe file lezen:
+1. open file,
+2. daarna lezen van file, regel voor regel. 
+*/
+
+import java.io.File;         // import file opener.
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;	// Scanner scan door elke regel van input.
+
+public class Main {
+  public static void main(String[] args) throws IOException {   // Gebruik IOException omdat er iets mis zou kunnen gaan.
+  
+  File file =new file("/Users/alexlee/Desktop/captmidn.txt");	// File opent oude file met naam: captmidn.txt".
+  																// Het pad op pc is: /Users/alexlee/Desktop/captmidn.txt
+  Scanner scan = new Scannner(file);
+  
+  String fileContent = "";		// Door "" heeft fileContent geen value. Bij fileContent = "hoi allemaal"; Zie je dit op de 1e 										// regel van nieuwe file.
+  
+  while(scan.hasNextLine()) {			// Als scan een line heeft doe dan het volgende (true),
+  	fileContent = fileContent.concat(scan.nextLine() + "\n");
+    }
+    //Store content van oude file op String fileContent. Door concatenation kan je meerdere Strings samenvoegen --> concat().
+    // Voeg elke line toe aan fileContent.
+  
+  FileWriter writer = new FileWriter("/Users/alexlee/Desktop/newfile.txt");
+  										// FileWriter = om een nieuwe file te schrijven.
+                                        // Locatie pc nieuw file. Deze komt op pc. Kan je terugvinden op naam: newfile.txt. Naam kan 											alles wezen.
+  writer.write(fileContent);			// Gebruik write() om text te schrijven in fileContent.
+  writer.close();						// Door file te closen kan er niks gebeuren met 										   											  fileContent.
+    
+  }
+}
