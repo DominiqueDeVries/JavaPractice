@@ -33,3 +33,19 @@ public class Main {
     
   }
 }
+/*
+// Oef.
+
+import java.io.File;      
+import java.io.FileNotFoundException;
+import java.util.Scanner;	
+
+public class Main {
+  public static void main(String[] args) throws FileNotFoundException { // Kan zijn dat hij de file niet kan vinden, daarom import 																			   FileNot... 
+  
+  File file =new file("/Users/alexlee/Desktop/captmidn.txt");	
+  																
+  Scanner scan = new Scannner(file);
+  
+  System.out.println(scan.nextLine());   // Laat alleen de 1e regel zien.
+*/
