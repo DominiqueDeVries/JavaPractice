@@ -9,7 +9,7 @@ Windows = "C:\\Users\\MyName\\filename.txt"
 Mac and Linux = "/Users/name/filename.txt"
 */
 
-import java.io.File;         // import file class, file the openen.File class heeft verschillende () methods om te gebruiken zoals, createNewFile(), delete(),et c
+import java.io.File;         // import file class, file the openen.File class heeft verschillende () methods om te gebruiken zoals, createNewFile(), delete(), canRead(),
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;	// Scanner scan door elke regel van input.
