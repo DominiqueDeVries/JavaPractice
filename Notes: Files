@@ -81,10 +81,10 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class ReadFile {
   public static void main(String[] args) {
     try {
-      File myObj = new File("filename.txt"); // In file staat: Files in Java might be tricky, but it is fun enough!  
-      Scanner myReader = new Scanner(myObj);
-      while (myReader.hasNextLine()) {
-        String data = myReader.nextLine();
+      File mijnObj = new File("filename.txt");  // Eerst object maken van File. In doce staat: Files in Java might be tricky, but it is fun enough!  
+      Scanner scanObj = new Scanner(mijnObj);   // scanObj bevat de file.
+      while (scanObj.hasNextLine()) {           // Als scanObj nog een woord heeft, dan continue de while loop.
+        String data = scanObj.nextLine();     // Sla het op op een variable en println data variable.
         System.out.println(data);
       }
       myReader.close();
