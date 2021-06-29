@@ -1,0 +1,28 @@
+import java.util.*;
+  
+public class Main {
+    public static void main(String[] argv) throws Exception {
+  
+        String s = "Hoi \n Hey \n WelkomWelkom";
+  
+        // create a new scanner
+        // with the specified String Object
+        Scanner scanner = new Scanner(s);
+  
+        // print the next line
+        System.out.println(scanner.nextLine());   // nextLine() =  returns the line that was skipped.
+  
+        // print the next line again
+        System.out.println(scanner.nextLine());   //  pintln alleen het volgende woord.
+  
+        // print the next line again
+        System.out.println(scanner.nextLine())    // 
+  
+        scanner.close();
+    }
+}
+
+Outout: 
+Hoi
+Hey
+Welkom
