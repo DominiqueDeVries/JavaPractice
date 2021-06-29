@@ -26,3 +26,33 @@ Outout:
 Hoi
 Hey
 Welkom
+//---------------------------------------------------------
+
+import java.util.*;
+  
+public class GFG1 {
+    public static void main(String[] argv)
+        throws Exception
+    {
+  
+        try {
+  
+            String s = "";      // door "" heeft s geen String, en daardoor: Exception thrown
+  
+            // create a new scanner
+            // with the specified String Object
+            Scanner scanner = new Scanner(s);
+  
+            System.out.println(scanner.nextLine());
+            scanner.close();
+        }
+        catch (Exception e) {
+            System.out.println("Exception thrown: " + e);
+        }
+    }
+}
+
+Output:
+Exception thrown: java.util.NoSuchElementException: No line found
+
+
