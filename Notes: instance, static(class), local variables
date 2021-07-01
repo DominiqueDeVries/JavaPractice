@@ -1,0 +1,94 @@
+package com.company;
+/*
+Verschil instance, static (class) en local variables:
+
+1. Instance variables:
+- kunnen alleen via een object gecalled worden.
+- declared in een class, maar niet in een method().
+- deze variables krijgen altijd een default value:
+        int data;  --> value is 0.
+- Kan niet geinitialiseerd worden :
+        class Test{
+        int data = 15;
+        data = 20;  // error
+        }
+
+        Wel in een method():
+        class Test{
+        int data = 15;
+          void someMethod(){
+            data = 20;  // geen error
+          }
+        }
+2. Static(class) variables:
+- gebruik keyword static = static int data = 50;
+- alleen 1 copy wordt gemaakt per class.
+- zijn zelfstabdig, iedereen kan hier gebruik van maken in de class.
+- heeft geen object nodig om gecalled te worden.
+- kan gecalled worden door static/non-static methodes()
+- bij veranderen van value, gebeurt dit auto bij de rest van deze specifieke static var.
+
+3. Local variables:
+- declared binnen de scope {} van de method() of de parameters van de method:
+
+    int areaCircle(int radius){        // int radius) = local var
+    int total = radius * radius;       //  int total = local var
+    return total;
+    }
+- niet accessible buiten de scope van de method().
+- krijgen geen default value.
+- in de method() kan je de local var direct callen, zonder object.
+
+ */
+public class Main {
+
+    static int c = 30;      // static/class var.
+    int a = 0;              // instanc var.
+
+    public static void main(String[] args) {
+
+        int b = 20;                 // 20, local var, binnen de main method().
+        System.out.println(c);      // 30, static var.
+        System.out.println(b);
+       // System.out.println(a);    // error, instance moet via een object.
+
+        Main object = new Main();
+
+        System.out.println(object.a);   // 0.
+
+        System.out.println(c);          // 30, static var.
+        System.out.println(Main.c);     // 30, static var, via de naam van de class.
+
+        System.out.println(b);          // 20, local var
+    }
+}
+
+
+//--------------------------------------------------------------------------------
+
+// Static variables
+
+class Student{  
+   int rollno;  	                //instance variable  
+   String name;  
+   static String college ="ITS";  //static variable  
+                                  //constructor  
+   Student(int r, String n){  
+   rollno = r;  
+   name = n;  
+   }  
+                                  
+   void display (){System.out.println(rollno+" "+name+" "+college);}  //method to display the values  
+}  
+                                                            
+public class TestStaticVariable1{          //Test class to show the values of objects  
+ public static void main(String args[]){  
+ Student s1 = new Student(111,"Karan");  
+ Student s2 = new Student(222,"Aryan");  
+ 
+ //we can change the college of all objects by the single line of code  
+ //Student.college="BBDIT";  
+ s1.display();  
+ s2.display();  
+ }  
+}  
