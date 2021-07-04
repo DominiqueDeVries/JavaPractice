@@ -1,19 +1,22 @@
 package com.company;
 
 /* Constructors:
+ Een speciale method() dat wordt gebruikt voor het initialiseren van objects. De constructor wordt gecalled wanneer
+  een object van de class is gemaakt. Het kan gebruikt worden om to set (=) initial values for object attributes.
+
 - 2 soorten constructors:
     1. Default constructor = Main(){}, zonder doorgegeven arguments binnen de parameters().
     2. Parametarized constructor = Main(String vb, int n){}, met doorgegeven arguments binnen de parameters().
 
 - Bij default constructors call je de constructor door het stukje (Main();) in Main obj1 = new Main();
 
-- Bij Parametarized constructors call je de constructor door het stukje Main("DEF", 456); in 
+- Bij Parametarized constructors call je de constructor door het stukje Main("DEF", 456); in
   Main obj2 = new Main("DEF", 456);
-  
-- Als de constructor wordt gecalled door bijv. Main obj1 = new Main();, zal die zoeken naar de 
+
+- Als de constructor wordt gecalled door bijv. Main obj1 = new Main();, zal die zoeken naar de
   default constructor Main() in jouw code.
-  
-- Een conctructor heeft geen return type. Als er een return type achter Main() constructor zou staan 
+
+- Een conctructor heeft geen return type. Als er een return type achter Main() constructor zou staan
   zoals int of void, kun je het beschouwen als een method().
 
 - Constructor heeft altijd de naam van de class met een hoofdletter, dus bijv. Main().
@@ -21,27 +24,28 @@ package com.company;
 
 public class Main {
 
-    String name;
+    String name;                    // class attribute
     int rno;
 
-    Main(){                         // Default constructor
+    Main(){                         // Default constructor.
 
-        name = "ABC";
+        name = "ABC";               // Set the initial value for the class attribute name.
         rno = 123;
     }
 
-    Main(String str, int n){        // Parametarized contructor
-
-        name = str;
+    Main(String str, int n){        // Parametarized contructor, met meerdere parameters
         rno = n;
+        name = str;
     }
 
     public static void main(String[] args) {
 
         Main obj1 = new Main();                     // Call de default constructor.
 
-        Main obj2 = new Main("DEF", 456);    // Call de parametarized constructor. 
-        // Binnen de parameter() moet wel een String en integer worden doorgegeven als argument. 
+        Main obj2 = new Main("DEF", 456);     // Call de parametarized constructor.
+                                                    // Je mag zoveel parameters als je wil.
+
+        // Binnen de parameter() moet wel een String en integer worden doorgegeven als argument.
 
         System.out.println(obj1.name);  // ABC
 
@@ -51,4 +55,4 @@ public class Main {
 
         System.out.println(obj2.rno);   // 456
     }
-}
+
