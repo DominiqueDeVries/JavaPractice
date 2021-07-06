@@ -1,6 +1,10 @@
 package com.company;
 /*
-Verschil instance, static (class) en local variables:
+4 soorten variables:
+1. instance var = non-static field 
+2. class var = static var/static field
+3. local variables
+4. parameters = var in een parameter. Dit is geen field.
 
 1. Instance variables:
 - kunnen alleen via een object gecalled worden.
