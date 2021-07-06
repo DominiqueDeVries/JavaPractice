@@ -1,0 +1,29 @@
+/*
+Constants = een variable waarvan de value nooit veranderd kan worden als de value is geassigned (=).
+
+- de naam van de constant is altijd hoofdletters.
+- heeft altijd public static final.
+
+- final zorgt ervoor dat de value van de variable nooit veranderd.
+- zonder static heeft een constant geen zin, want dan krijg je meerdere kopieen van bijv WIDTH en zonder static
+  is het een instance variable.
+- public omdat het altijd dezelfde value heeft, heeft private met getters/setters geen zin.
+*/
+
+public class Main {
+
+	public static final int WIDTH = 800;
+    
+    public static final int HIGHT = 600;
+    
+    public static final int NUM_ENEMIES = 5;
+    
+  public static void main(String[] args) {
+    
+      System.out.println(Main.WIDTH);		// 800, callen zonder object, omdat WIDTH static is.
+      
+      System.out.println(WIDTH);			// 800
+      
+      System.out.println(Math.PI);			// 3.141592653589793, Math = class, PI = constant.
+  }
+}
