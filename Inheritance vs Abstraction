@@ -1,14 +1,14 @@
 //Inheritance
 
-class Vehicle {								      // superclass, bij final class Vehicle (non-access modifier), dan
+class Vehicle {			    // superclass, bij final class Vehicle (non-access modifier), dan
                                     // is er geen inheritance mogelijk tussen Vehicle en Car.
   protected String brand = "Ford";
-  public void honk() {						         // bij Inheritance heb je wel een body bij method()
-    System.out.println("Tuut, tuut!");		// bij Abstraction geen body, mag je zelf invullen.
+  public void honk() {			        // bij Inheritance heb je wel een body bij method()
+    System.out.println("Tuut, tuut!");		// bij Abstraction geen body, mag je zelf invullen en geen {}
   }
 }
 
-class Car extends Vehicle {				      	// subclass, door extends ben je bezig met inheritance
+class Car extends Vehicle {		        // subclass, door extends ben je bezig met inheritance
   private String modelName = "Mustang";
   
   public static void main(String[] args) {
@@ -16,7 +16,7 @@ class Car extends Vehicle {				      	// subclass, door extends ben je bezig met
     Car myFastCar = new Car();
     Vehicle objectV = new Vehicle();
     
-    objectV.honk();			                // bij Inheritance kan je een object maken van superclass en subclsass.
+    objectV.honk();			// bij Inheritance kan je een object maken van superclass en subclsass.
                                         // bij Abstractionmag je alleen een object maken van subclass, geen superclass.
     myFastCar.honk();
     System.out.println(myFastCar.brand + " " + myFastCar.modelName);
@@ -26,34 +26,34 @@ class Car extends Vehicle {				      	// subclass, door extends ben je bezig met
 /*		
 // Abstraction
 
-abstract class Animal { 						      // Abstract class, kan geen object maken van Abstracte class.
+abstract class Animal { 			// Abstract class, kan geen object maken van Abstracte class.
   												
-  public abstract void animalSound();			// Abstract method (geen body) --> ();
- 												                  // Abstract method kan alleen in abstracte class. Er is geen normale astract var.										
+  public abstract void animalSound();		// Abstract method (geen body) --> (); en geen {}
+ 						// Abstract method kan alleen in abstracte class. Er is geen normale astract var.										
   
-  public void sleep() {							      // Regular method (nomale methode() met body).
+  public void sleep() {				// Regular method (nomale methode() met body).
   
     System.out.println("Zzz");
   }
 }
 
-												                  // Subclass (inherit from Animal)
+						// Subclass (inherit from Animal)
 class Pig extends Animal {
   public void animalSound() {
-    											                // Body van animalSound().
+    						// Body van animalSound().
     System.out.println("The pig says: wee wee");
   }
 }
 
 class Main {
   public static void main(String[] args) {
-    Pig myPig = new Pig(); 					      // Maak een Pig object
+    Pig myPig = new Pig(); 			// Maak een Pig object
     
     Animal objectAn = new Animal();
-    objectAn.sleep();						          // Error, geen object van  Abstract class.
+    objectAn.sleep();				// Error, geen object van  Abstract class.
     
     myPig.animalSound();	                // The pig says: wee wee
-    myPig.sleep();			                  // Zzz
+    myPig.sleep();			        // Zzz
   }
 }
 
