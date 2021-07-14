@@ -63,7 +63,26 @@ public class Loops {
     }
 }   
      
-     
+//----------------------------------
+
+Eigen package maken:
+
+1. Zet package en naam van de package boven de class, bijv. package p1;. Dit staat boven in class C1. Naam van class is C1.
+
+2. Sla dit op als file met bijv naam: Demo.java.
+
+3. Compile the file: c:\workspace>javac Demo.java
+
+3. Maak  nu een package voor deze file: c:\workspace>java p1.c1
+
+3. Om de code van class C1 te executen: c:\workspace>java p1.c1
+Direct onder c:\workspace> staat de output.
+
+-d  =  de plek waar de class wordt opgeslagen. Kan ook andere directory gebruiken, zoals: c:/user (windows)
+
+.   =  gebruik de package in dezelfde directory(punt).
+
+javac -d . demo.java  = compile de package.
 
 
 
