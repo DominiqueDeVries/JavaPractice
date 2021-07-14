@@ -1,0 +1,32 @@
+/*
+Packages
+
+You can have multiple main-methods in 1 package.
+
+*/
+
+// Main.java
+package com.oefening;
+
+public class Main {
+  public static void main(String[] args) {
+   
+   Oef.sayHi();
+   }
+}
+
+//--------------------------------
+
+// Oef.java
+package com.oefening;
+
+public class Oef{
+	public static void main(String[] args) {
+    
+    public static void sayHi(){
+    
+    	System.out.println("Hi");
+    }
+    
+	}
+}
