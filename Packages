@@ -56,7 +56,7 @@ public class Boem {
 
 public class Loops {
 
-    public int var = 8;  // Zonder public vindt Boem.java niks.
+    public int var = 8;  	// Without public Boem.java can not find var.
 
     public static void sayHi(){
         System.out.println("Hi");
