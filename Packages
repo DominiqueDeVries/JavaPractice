@@ -2,6 +2,7 @@
 Packages
 
 You can have multiple main-methods in 1 package.
+A default package don't have package declaration
 
 */
 
