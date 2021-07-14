@@ -82,9 +82,12 @@ Direct onder c:\workspace> staat de output.
 
 .   =  gebruik de package in dezelfde directory(punt).
 
-javac -d . demo.java  = compile de package.
+javac -d . demo.java  = compile de package. Dit forceert de compiler een om package p1 te maken.
 
+- Als er 2 packages (p1=packag en p2=subpackage) staan in code:  package p1.p2;
+dan executen om deze manier:
 
+	c:\workspace>java p1.p2.c1
 
 
 
