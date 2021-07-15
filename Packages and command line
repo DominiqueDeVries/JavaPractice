@@ -64,6 +64,9 @@ public class Loops {
 }   
      
 //----------------------------------
+Command line
+
+Voorbeeld 
 
 Eigen package maken:
 
@@ -88,9 +91,15 @@ javac -d . demo.java  = compile de package. Dit forceert de compiler een om pack
 dan executen om deze manier:
 
 	c:\workspace>java p1.p2.c1
+//----------------------------------------------------------------------------------------
 
+Voorbeeld 2
 
+Java-file zonder package:
 
+1. Om bijv Test.java te compilen: C:\Users\maaik\Documents\example>javac Test.java    --> bij een error in je code zal die niet compile en zie je een error in command line
+											en maakt die geen nieuwe class file.
+2. Om Test.java te runnen: 	  C:\Users\maaik\Documents\example>java Test
 
 
 
