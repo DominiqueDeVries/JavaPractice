@@ -1,0 +1,74 @@
+Command line
+Command lines
+
+Voorbeeld 1
+
+1. Open wordpad en maak een class aan, bijv class Hello
+
+2. Sla nu document op:  - File,
+                        - Documents
+                        - Maak een nieuwe folder bijv. java, in Documents.
+                        - sla doc op in java folder als bijv. "Hello.java"
+                        
+3. Open Command bij zoekbar windows, toets in zoekbar: run
+
+4. Nu zie je alleen C:\Users\Dominique>
+
+5. Zet achter C:\Users\Dominique>dir    --> nu zie je rechts locatie staan als Desktop, Documents, etc.
+
+6. Kies nu voor C:\Users\Dominique>cd Documents    --> druk enter
+
+7. Het wordt nu gezet naar C:\Users\Dominique\Documents>    --> zitten nu in Documents
+
+8. Zet nu achter weer dir:  C:\Users\Dominique\Documents>dir   --> zie je weer rechts java folder staan.
+
+9. C:\Users\Dominique\Documents>cd java   --> gebruik weer cd java
+
+10. C:\Users\Dominique\Documents\java>
+
+11. C:\Users\Dominique\Documents\java>dir  -->  nu zie je rechts Hello.java staan
+
+12. C:\Users\Dominique\Documents\java>javac Hello.java    --> Door javac ga je compilen. Compile de Hello.java docu.
+
+13. Na het compilen van Hello.java, is er een docu naast te komen staan met de byte-code. Docu heet Hello.class. Deze is afkomstig van Hello.java
+
+14. Nu gaan we de Hello.class executen door: C:\Users\Dominique\Documents\java>java Hello      --. zonder c en geen .java
+
+15. Nu executen van Hello.class, direct onder:  C:\Users\Dominique\Documents\java>java Hello
+
+                                                Hey Youtube.
+                      
+Voorbeeld 2
+
+Eigen package maken:
+
+1. Zet package en naam van de package boven de class, bijv. package p1;. Dit staat boven in class C1. Naam van class is C1.
+
+2. Sla dit op als file met bijv naam: Demo.java.
+
+3. Compile the file: c:\workspace>javac Demo.java
+
+3. Maak  nu een package voor deze file: c:\workspace>java p1.c1
+
+3. Om de code van class C1 te executen: c:\workspace>java p1.c1
+Direct onder c:\workspace> staat de output.
+
+-d  =  de plek waar de class wordt opgeslagen. Kan ook andere directory gebruiken, zoals: c:/user (windows)
+
+.   =  gebruik de package in dezelfde directory(punt).
+
+javac -d . demo.java  = compile de package. Dit forceert de compiler een om package p1 te maken.
+
+- Als er 2 packages (p1=packag en p2=subpackage) staan in code:  package p1.p2;
+dan executen om deze manier:
+
+	c:\workspace>java p1.p2.c1
+//----------------------------------------------------------------------------------------
+
+Voorbeeld 3
+
+Java-file zonder package:
+
+1. Om bijv Test.java te compilen: C:\Users\maaik\Documents\example>javac Test.java    --> bij een error in je code zal die niet compile en zie je een error in command line
+											en maakt die geen nieuwe class file.
+2. Om Test.java te runnen: 	  C:\Users\maaik\Documents\example>java Test
