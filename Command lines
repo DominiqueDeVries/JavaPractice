@@ -1,5 +1,11 @@
-Command line
 Command lines
+
+dir = in Directory, zie je bijv Desktop, Documents, etc
+cd = change directory
+javac Hello.class = compile van Hello.java
+Na compilen van Hello.java krijg je Hello.class (class met byte-code).
+Daarna executen van Hello.class = java Hello    --> Hello is naam van de class.
+Na executen zie je output van Hello.class krijg je output code.
 
 Voorbeeld 1
 
