@@ -1,0 +1,21 @@
+public class Main {
+	 public static void main(String[] args) {
+     
+        int x = 10;
+        
+        public void mijnMethode() {
+    		int y = 8;
+            System.out.println(x);		// 10
+            int z;						// buiten de scope van de if-statement.	
+            if(y<10){
+            	z=11;					
+                System.out.println(z);	// 11
+            } else {
+            	z=20; 
+            }
+    
+    		System.out.println(z);  // 20, binnen de scope van mijnMethode().
+   		}
+   
+  	}
+}
