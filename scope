@@ -29,5 +29,5 @@ int x = 10;
    	System.out.println(z);	// Error
     }
   
-  }
+  }  // scope van method eindigt hier.
 
