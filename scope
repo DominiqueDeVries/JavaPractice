@@ -12,8 +12,8 @@
             	z=20; 
             }
     
-    		System.out.println(z);  // 20, binnen de scope van mijnMethode().
-   		}
+    	   System.out.println(z);  // 20, binnen de scope van mijnMethode().
+        }
    
 //--------------------------------------
 
@@ -26,7 +26,7 @@ int x = 10;
     	int z = 11;
         System.out.println(z);  // 11
     } else {
-   		System.out.println(z);	// Error
+   	System.out.println(z);	// Error
     }
   
   }
