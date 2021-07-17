@@ -1,6 +1,4 @@
-public class Main {
-	 public static void main(String[] args) {
-     
+
         int x = 10;
         
         public void mijnMethode() {
@@ -17,5 +15,19 @@ public class Main {
     		System.out.println(z);  // 20, binnen de scope van mijnMethode().
    		}
    
-  	}
-}
+//--------------------------------------
+
+int x = 10;
+  
+  public void method() {
+  	int y = 8;
+    System.out.println(x);
+  	if(y < 10) {
+    	int z = 11;
+        System.out.println(z);  // 11
+    } else {
+   		System.out.println(z);	// Error
+    }
+  
+  }
+
