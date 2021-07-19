@@ -1,0 +1,77 @@
+/*
+Een method kan op 2 manieren gecalled worden:
+1- Method() returned een value (geen void, wel datatype en return),
+2- Method() returned niks (void, geen datatype en geen return).
+*/
+
+public class Main {
+  public static void main(String[] args) {
+
+      int a = 11;
+      int b = 6;
+      int c = minFunction(a, b); // Returned een value.
+      
+      System.out.println("Minimum Value = " + c); // Minimum Value = 6.
+     
+      int d = 5;
+      int e = 4;
+      int f = minFunction(d, e);
+      
+     System.out.println("Minimum Value = " + f);  // Minimum Value = 4.
+   		}
+
+   // Returned 2 values, daarom int (int=datatype dat returned wordt) en return.
+   
+   public static int minFunction(int a, int b) {  // ipv int a en int b, kan ook (int var, int var2).
+      int min;
+      if (a > b)
+         min = b;
+      else
+         min = a;
+
+      return min; 
+  }
+}
+
+/*
+
+public class ExampleVoid {
+
+   public static void main(String[] args) {
+      methodRankPoints(255.7);  // Een call naar een statement ; daarom void-method.
+   }
+
+   public static void methodRankPoints(double points) { // void-method
+      if (points >= 202.5) {
+         System.out.println("Rank:A1");
+      }else if (points >= 122.4) {
+         System.out.println("Rank:A2");
+      }else {
+         System.out.println("Rank:A3");
+      }
+   }
+}
+
+//--------------------------------------------
+
+public class ExampleMinNumber {
+   
+   public static void main(String[] args) {
+      int a = 11;
+      int b = 6;
+      int c = minFunction(a, b);
+      System.out.println("Minimum Value = " + c);
+   }
+
+   // returns the minimum of two numbers
+   public static int minFunction(int n1, int n2) {
+      int min;
+      if (n1 > n2)
+         min = n2;
+      else
+         min = n1;
+
+      return min; 
+   }
+}
+*
