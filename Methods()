@@ -74,4 +74,29 @@ public class ExampleMinNumber {
       return min; 
    }
 }
-*
+
+
+//-----------------------------------------
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int x = 3;
+        int y = 4;
+
+        int z = oefMeth(x, y);      // z zit in de scope van main(), je mag z 2x gebruiken, omdat z verwijnt in
+                                    // oefMeth()
+
+        System.out.println(z);      // 7, zonder println, zie je niks bij output.
+
+    }
+         public static int oefMeth ( int x, int y){
+
+            int z = x + y;          // Na het executen van z verwijnt z in de Oefmeth().
+
+            return z;               // in plaats van int z = x + y; en return z; kan ook alleen: return x + y;
+        }
+}
+*/
