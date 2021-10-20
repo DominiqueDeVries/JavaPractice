@@ -1,0 +1,23 @@
+public class Main {
+  
+  public static void main(String[] args) {
+    
+    int a=5,i;
+    
+
+	i=++a + ++a + a++;   		
+    							// a++ = post increment operator, eerst a, daarna pas 1+ erbij tellen
+                                // i=6 (5+1) + a=7 (1+6) + a=7, daarna pas a=8.
+                                 
+    System.out.println(a); 		// 8
+    System.out.println(i); 		// 20
+    
+	i=a++ + ++a + ++a;
+	a=++a + ++a + a++;			// ++a = pre increment operator, eerst 1 erbij dan pas a.
+
+	System.out.println(a);
+	System.out.println(i);
+    
+    
+  }
+}
